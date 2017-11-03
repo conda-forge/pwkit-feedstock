@@ -1,6 +1,6 @@
 {% set name = "pwkit" %}
-{% set version = "0.8.11" %}
-{% set sha256 = "aed8f1e6fc07d00c4d4d7bb454a99599534ca7431146c4ffd208618b067b27d8" %}
+{% set version = "0.8.12" %}
+{% set sha256 = "103d64d0506eb6b82a34263119a4d5fd9393921fd49c10fdd31f185288eae7c9" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   script: python setup.py install --single-version-externally-managed --record=files.txt
   skip: true  # [win]
   entry_points:
