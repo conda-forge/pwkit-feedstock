@@ -12,8 +12,8 @@ source:
 
 build:
   number: 0
+  noarch: python
   script: python setup.py install --single-version-externally-managed --record=files.txt
-  skip: true  # [win]
   entry_points:
     - astrotool = pwkit.cli.astrotool:commandline
     - casatask = pwkit.environments.casa.tasks:commandline
@@ -28,7 +28,7 @@ requirements:
     - setuptools
 
   run:
-    - pathlib  # [py2k]
+    - pathlib
     - python
     - six
 
