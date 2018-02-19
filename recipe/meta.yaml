@@ -1,20 +1,19 @@
 {% set name = "pwkit" %}
-{% set version = "0.8.15" %}
-{% set sha256 = "a38b764bd6104841c0095d093d98a4213f4d6917884794beb42293590ebe52f4" %}
+{% set version = "0.8.16" %}
+{% set sha256 = "561656e5d846ea56cb8bc0bc26108e1e25c4f8979f28cd3bdeed7f6cfc23c160" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
   number: 0
+  noarch: python
   script: python setup.py install --single-version-externally-managed --record=files.txt
-  skip: true  # [win]
   entry_points:
     - astrotool = pwkit.cli.astrotool:commandline
     - casatask = pwkit.environments.casa.tasks:commandline
@@ -29,7 +28,7 @@ requirements:
     - setuptools
 
   run:
-    - pathlib  # [py2k]
+    - pathlib
     - python
     - six
 
