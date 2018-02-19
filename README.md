@@ -15,9 +15,7 @@ A grab-bag of helpful tools for doing science in Python.
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/pwkit-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/pwkit-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/pwkit-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/pwkit-feedstock)
-Windows: ![](https://cdn.rawgit.com/conda-forge/conda-smithy/90845bba35bec53edac7a16638aa4d77217a3713/conda_smithy/static/disabled.svg)
+All platforms: [![Circle CI](https://circleci.com/gh/conda-forge/pwkit-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/pwkit-feedstock)
 
 Current release info
 ====================
