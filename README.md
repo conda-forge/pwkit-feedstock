@@ -15,12 +15,15 @@ A grab-bag of helpful tools for doing science in Python.
 Current build status
 ====================
 
-All platforms: [![Circle CI](https://circleci.com/gh/conda-forge/pwkit-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/pwkit-feedstock)
+All platforms:
+[![noarch](https://img.shields.io/circleci/project/github/conda-forge/pwkit-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/pwkit-feedstock)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/pwkit/badges/version.svg)](https://anaconda.org/conda-forge/pwkit)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/pwkit/badges/downloads.svg)](https://anaconda.org/conda-forge/pwkit)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-pwkit-green.svg)](https://anaconda.org/conda-forge/pwkit) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/pwkit.svg)](https://anaconda.org/conda-forge/pwkit) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/pwkit.svg)](https://anaconda.org/conda-forge/pwkit) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/pwkit.svg)](https://anaconda.org/conda-forge/pwkit) |
 
 Installing pwkit
 ================
