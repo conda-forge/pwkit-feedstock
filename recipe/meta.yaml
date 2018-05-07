@@ -13,7 +13,7 @@ source:
 build:
   number: 0
   noarch: python
-  script: python setup.py install --single-version-externally-managed --record=files.txt
+  script: python -m pip install --no-deps --ignore-installed .
   entry_points:
     - astrotool = pwkit.cli.astrotool:commandline
     - casatask = pwkit.environments.casa.tasks:commandline
@@ -24,6 +24,7 @@ build:
 
 requirements:
   build:
+    - pip
     - python
     - setuptools
 
