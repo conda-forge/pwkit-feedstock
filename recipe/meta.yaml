@@ -1,6 +1,6 @@
 {% set name = "pwkit" %}
-{% set version = "0.8.18" %}
-{% set sha256 = "4515af858756616cc759e48e520cb71d3961921ce16783fec740d3dfab4af78c" %}
+{% set version = "0.8.19" %}
+{% set sha256 = "e6b648a6643edd4e5f217743238464a849b966ae4258e3a62ffc9eec2571fc83" %}
 
 package:
   name: {{ name|lower }}
@@ -13,7 +13,7 @@ source:
 build:
   number: 0
   noarch: python
-  script: python setup.py install --single-version-externally-managed --record=files.txt
+  script: python -m pip install --no-deps --ignore-installed .
   entry_points:
     - astrotool = pwkit.cli.astrotool:commandline
     - casatask = pwkit.environments.casa.tasks:commandline
@@ -24,6 +24,7 @@ build:
 
 requirements:
   build:
+    - pip
     - python
     - setuptools
 
