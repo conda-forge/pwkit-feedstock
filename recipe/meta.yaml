@@ -1,6 +1,6 @@
 {% set name = "pwkit" %}
-{% set version = "0.8.19" %}
-{% set sha256 = "e6b648a6643edd4e5f217743238464a849b966ae4258e3a62ffc9eec2571fc83" %}
+{% set version = "0.8.20" %}
+{% set sha256 = "487a98996ebf4d1edbb2d719f114833e1cfbb5a05e15d738ad7711df753f7690" %}
 
 package:
   name: {{ name|lower }}
