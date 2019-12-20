@@ -1,6 +1,6 @@
 {% set name = "pwkit" %}
-{% set version = "0.8.20" %}
-{% set sha256 = "487a98996ebf4d1edbb2d719f114833e1cfbb5a05e15d738ad7711df753f7690" %}
+{% set version = "1.0.0" %}
+{% set sha256 = "095319d0f8ab600d3be7d85ba95e24623a91b597da861e7977fc1ed5c3295644" %}
 
 package:
   name: {{ name|lower }}
@@ -13,7 +13,7 @@ source:
 build:
   number: 0
   noarch: python
-  script: python -m pip install --no-deps --ignore-installed .
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
   entry_points:
     - astrotool = pwkit.cli.astrotool:commandline
     - casatask = pwkit.environments.casa.tasks:commandline
@@ -48,6 +48,7 @@ about:
   home: https://github.com/pkgw/pwkit/
   license: MIT
   license_family: MIT
+  license_file: LICENSE
   summary: 'Miscellaneous scientific and astronomical tools.'
   description: |
     A grab-bag of helpful tools for doing science in Python.
