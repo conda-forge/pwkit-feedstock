@@ -43,7 +43,7 @@ test:
     - latexdriver --help
     - pkcasascript --help
     - pkenvtool --help
-    - wrapout --help
+    - wrapout echo hello world
   requires:
     - pip
 
