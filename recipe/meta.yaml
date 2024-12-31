@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pwkit-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pwkit-{{ version }}.tar.gz
   sha256: e2adc5064c686003a5a019214c33f514b6e5f9220b9ff683cdb32a85e8cd0b56
 
 build:
@@ -20,20 +20,21 @@ build:
     - wrapout = pwkit.cli.wrapout:commandline
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - pip
     - setuptools
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - numpy >=1.6
 
 test:
   requires:
     - numpy
+    - python {{ python_min }}
   imports:
     - pwkit
   commands:
@@ -47,6 +48,7 @@ test:
     - wrapout echo hello world
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/pkgw/pwkit/
