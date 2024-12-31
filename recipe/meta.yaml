@@ -19,7 +19,7 @@ build:
     - pkenvtool = pwkit.environments:commandline
     - wrapout = pwkit.cli.wrapout:commandline
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 1
 
 requirements:
@@ -34,6 +34,7 @@ requirements:
 test:
   requires:
     - numpy
+    - pip
     - python {{ python_min }}
   imports:
     - pwkit
@@ -46,9 +47,6 @@ test:
     - pkcasascript --help
     - pkenvtool --help
     - wrapout echo hello world
-  requires:
-    - pip
-    - python {{ python_min }}
 
 about:
   home: https://github.com/pkgw/pwkit/
