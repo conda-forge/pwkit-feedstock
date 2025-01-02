@@ -1,5 +1,5 @@
 {% set name = "pwkit" %}
-{% set version = "1.2.1" %}
+{% set version = "1.2.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pwkit-{{ version }}.tar.gz
-  sha256: e2adc5064c686003a5a019214c33f514b6e5f9220b9ff683cdb32a85e8cd0b56
+  sha256: 79f32a7d29e233ba70bd72e97248cce43ed2fbd837be2bbf2abba6977d7cc8a5
 
 build:
   entry_points:
@@ -20,7 +20,7 @@ build:
     - wrapout = pwkit.cli.wrapout:commandline
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
