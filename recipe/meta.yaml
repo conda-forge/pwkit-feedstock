@@ -1,5 +1,5 @@
 {% set name = "pwkit" %}
-{% set version = "1.2.2" %}
+{% set version = "1.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pwkit-{{ version }}.tar.gz
-  sha256: 79f32a7d29e233ba70bd72e97248cce43ed2fbd837be2bbf2abba6977d7cc8a5
+  sha256: 9cbae4bdb099dd0473482987995e51d2b605946afcee5281582efb97c8294903
 
 build:
   entry_points:
